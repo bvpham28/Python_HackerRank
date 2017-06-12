@@ -1,6 +1,5 @@
-if __name__ == '__main__':
-    for _ in range(int(input())):
-        name = input()
-        score = float(input())
+n = int(input())
+marksheet = [[input(), float(input())] for _ in range(n)]
 
-nested_list = [[name, score], [name, score], ['blue', 'white']]
+second_highest = sorted(list(set([marks for name, marks in marksheet])))[1]
+print('\n'.join([a for a,b in sorted(marksheet) if b == second_highest]))
